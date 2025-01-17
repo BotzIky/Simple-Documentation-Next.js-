@@ -1,1 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  --primary: #3b82f6;
+  --secondary: #1e293b;
+}
+
+body {
+  @apply bg-gray-900 text-gray-100 font-fira-code overflow-x-hidden;
+}
+
+.nav-link {
+  @apply text-gray-300 hover:text-blue-400 transition-colors duration-200 block py-2 md:py-0;
+}
+
+.sidebar-link {
+  @apply flex items-center w-full text-left text-gray-300 hover:text-blue-400 transition-colors duration-200 py-2 px-2 rounded-lg hover:bg-gray-800/50;
+}
+
+.btn-primary {
+  @apply px-6 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-200 disabled:opacity-75 disabled:cursor-not-allowed;
+}
+
+.api-section {
+  @apply mb-8 p-6 bg-gray-800/50 rounded-xl;
+}
+
+.method-badge {
+  @apply px-3 py-1 rounded-md text-sm font-medium;
+}
+
+.method-get {
+  @apply bg-green-500/20 text-green-400;
+}
+
+.method-post {
+  @apply bg-blue-500/20 text-blue-400;
+}
+
+.method-put {
+  @apply bg-yellow-500/20 text-yellow-400;
+}
+
+.method-delete {
+  @apply bg-red-500/20 text-red-400;
+}
+
+.code-block {
+  @apply my-4 p-4 bg-gray-900 rounded-lg overflow-x-auto;
+}
+
+.endpoint-card {
+  @apply p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-200 cursor-pointer;
+}
+
+.custom-scrollbar {
+  @apply overflow-y-auto;
+  scrollbar-width: thin;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #374151;
+  border-radius: 3px;
+}
+
+.docs-sidebar {
+  @apply fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-gray-900/95 border-r border-gray-800 transition-transform duration-300 z-40;
+}
+
+.docs-sidebar.mobile-hidden {
+  @apply -translate-x-full md:translate-x-0;
+}
+
+.docs-content {
+  @apply md:ml-64 p-4 md:p-8 transition-all duration-300;
+}
+
+.test-panel {
+  @apply mt-4 p-4 bg-gray-800/30 rounded-lg;
+}
+
+.input-field {
+  @apply w-full p-2 bg-gray-900 border border-gray-700 rounded-md text-gray-300 focus:border-blue-500 focus:outline-none;
+}
+
+.response-panel {
+  @apply mt-4 p-4 bg-gray-900 rounded-lg overflow-x-auto;
+}
+
+@media (max-width: 768px) {
+  .docs-content {
+    margin-left: 0;
+  }
+  
+  table {
+    @apply block w-full overflow-x-auto;
+  }
+  
+  td, th {
+    @apply whitespace-nowrap;
+  }
+}
