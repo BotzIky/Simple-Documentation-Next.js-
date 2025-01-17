@@ -1,7 +1,19 @@
 {
   "name": "botzaku-docs",
   "version": "1.0.0",
-  "private": true,
+  "description": "A simple documentation website built with Next.js",
+  "author": "Riski Yanda",
+  "keywords": [
+    "free code",
+    "free",
+    "free website",
+    "example web",
+    "documentation",
+    "Next.js",
+    "React",
+    "JavaScript",
+    "web development"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
